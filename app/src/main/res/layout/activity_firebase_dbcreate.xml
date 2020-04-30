@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirebaseDBCreate"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kode Barang"
+            android:layout_marginStart="5dp"/>
+        <EditText
+            android:id="@+id/et_kodebarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kode Barang"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Barang"
+            android:layout_marginStart="5dp"/>
+        <EditText
+            android:id="@+id/et_namabarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Barang"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Satuan"
+            android:layout_marginStart="5dp"/>
+        <EditText
+            android:id="@+id/et_satuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Satuan"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga Beli"
+                android:layout_marginStart="5dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_marginRight="5dp"/>
+            <EditText
+                android:id="@+id/et_hargabeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Harga Beli"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="10dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rounded_edittext"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga Jual"
+                android:layout_marginStart="5dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_marginLeft="5dp"/>
+            <EditText
+                android:id="@+id/et_hargajual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Harga Jual"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="10dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_edittext"/>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Stok"
+                android:layout_marginStart="5dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_marginRight="5dp"/>
+            <EditText
+                android:id="@+id/et_stok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Stok"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="10dp"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rounded_edittext"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Stok Minimal"
+                android:layout_marginStart="5dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="0"
+                android:layout_marginLeft="5dp"/>
+            <EditText
+                android:id="@+id/et_stokmin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Stok Min."
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="10dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_row="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_edittext"/>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi"
+            android:layout_marginStart="5dp"/>
+        <EditText
+            android:id="@+id/et_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi Barang"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:maxLines="8"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_edittext"/>
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
